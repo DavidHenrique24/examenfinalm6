@@ -8,9 +8,19 @@ export default function Buscador() {
     const API_KEY = "3a7cc84c049eb5d333e91f8b63d07b4c"; 
 
     useEffect(() => {
+        const apiKey = "3a7cc84c049eb5d333e91f8b63d07b4c";
+
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es&page=1`)
+            .then(res => res.json()) //si hay respuesta lo convertimo en json 
+            .then(data => {
+                setPeliculas(data.results); //actualizamos el estado de pelis con los resultados 
+            })
+    }, []);
+
+
+    useEffect(() => {
         // Si no hay texto en query, no hacemos naada 
         if (!query) {  
-            setPeliculas([]); 
             return;
         }
       
