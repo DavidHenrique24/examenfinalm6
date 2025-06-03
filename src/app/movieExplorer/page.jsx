@@ -1,5 +1,6 @@
 "use client";
 import Peliculas from "../componentes/peliculas";
+import Buscador from "../componentes/buscador";
 // import Detalles from "../componentes/detalle";
 export default function MovieExplorer() {
   return (
@@ -7,6 +8,8 @@ export default function MovieExplorer() {
       <h1 className="text-4xl font-bold ">Movie Explorer</h1>
        <Peliculas />
        {/* <Detalles /> */}
+         <Buscador />
+
     </main>
       
   );

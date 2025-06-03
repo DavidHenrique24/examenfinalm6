@@ -7,7 +7,7 @@ export default function Detalle() {
  const apiKey = "3a7cc84c049eb5d333e91f8b63d07b4c";
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=es`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}language=es-ES&append_to_response=videos,credits`)
          .then((res) => res.json()) 
         .then((data) => setPeliculaDetalle(data));
     });
