@@ -18,8 +18,9 @@ export default function Peliculas() {
    <main>
     <h1 className="text-lg font-bold">Peliculas mas Populares </h1>
     <div className="tarjetas">
+        
       {peliculas.map((pelicula) => ( 
-        //cada peli es un div con su id
+     
         <div key={pelicula.id} className="p-5">
           <img
             src={
